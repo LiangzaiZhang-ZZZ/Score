@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/notebooks/intro.ipynb
 """
 
-
 scores = input().split()
 
 fail_count = 0
@@ -31,10 +30,10 @@ for s in scores:
 print(fail_count)
 
 # 最大最小平均
-maximum = max(nums)
-minimum = min(nums)
+maximum1 = max(nums)
+minimum2 = min(nums)
 average = total / count
 
 print(f"平均分:{average}")
-print(f"最高分:{maximum}")
-print(f"最低分:{minimum}")
+print(f"最高分:{maximum1}")
+print(f"最低分:{minimum2}")
