@@ -7,29 +7,34 @@ Original file is located at
     https://colab.research.google.com/notebooks/intro.ipynb
 """
 
-# 1. 讀取輸入字串
-input_data = input()
 
-# 2. 將字串以空格分割成列表
-scores_list = input_data.split()
+scores = input().split()
 
-# 3. 初始化計數器
 fail_count = 0
+count = 0
+total = 0
 
-# 4. 遍歷列表，判斷分數是否小於 60
-for score_str in scores_list:
-    # 將字串轉換為整數進行比較
-    score = int(score_str)
+# 转换成整数列表
+nums = []
+
+for s in scores:
+    score = int(s)
+    nums.append(score)
+
     if score < 60:
         fail_count += 1
 
-# 5. 輸出結果
+    count += 1
+    total += score
+
+# 输出不及格人数
 print(fail_count)
 
+# 最大最小平均
+maximum = max(nums)
+minimum = min(nums)
+average = total / count
 
-# 使用內建函數找出最大與最小值
-maximum = max(scores_list)
-minimum = min(scores_list)
-
-print(f"最高分：{maximum}")
-print(f"最低分：{minimum}")
+print(f"平均分:{average}")
+print(f"最高分:{maximum}")
+print(f"最低分:{minimum}")
